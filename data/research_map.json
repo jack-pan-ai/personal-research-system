@@ -1,0 +1,17 @@
+{
+  "big_questions": [
+    "What makes an audio LLM genuinely useful beyond speech-to-text plus text LLM?",
+    "Which audio capabilities need native audio representations?",
+    "What are the highest-leverage bottlenecks for product-grade audio LLMs?"
+  ],
+  "interesting_gaps": [
+    "TBD"
+  ],
+  "useful_problems": [
+    "TBD"
+  ],
+  "beliefs_changed": [
+    "TBD"
+  ]
+}
+
