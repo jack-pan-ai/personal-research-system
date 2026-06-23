@@ -1,13 +1,92 @@
 [
   {
-    "title": "Seed paper placeholder",
-    "area": "audio LLM",
+    "title": "AudioPaLM: A Large Language Model That Can Speak and Listen",
+    "area": "speech/audio LLM",
+    "status": "read",
+    "interesting": 5,
+    "useful": 4,
+    "why_it_matters": "Early reference point for combining a strong text LLM with audio-language modeling to support speech understanding and generation.",
+    "next": "Use as a baseline for the question: what does native audio add beyond ASR plus text LLM?",
+    "link": "https://arxiv.org/abs/2306.12925"
+  },
+  {
+    "title": "SpeechGPT: Empowering Large Language Models with Intrinsic Cross-Modal Conversational Abilities",
+    "area": "speech LLM",
+    "status": "read",
+    "interesting": 4,
+    "useful": 4,
+    "why_it_matters": "Useful for thinking about speech-native conversational modeling and discrete speech representations.",
+    "next": "Extract architecture assumptions and compare with later audio LLM systems.",
+    "link": "https://arxiv.org/abs/2305.11000"
+  },
+  {
+    "title": "SALMONN: Towards Generic Hearing Abilities for Large Language Models",
+    "area": "general audio LLM",
+    "status": "read",
+    "interesting": 5,
+    "useful": 4,
+    "why_it_matters": "Frames audio LLMs as generic hearing systems across speech, audio events, and music.",
+    "next": "Deep read for capability taxonomy and emergent audio reasoning claims.",
+    "link": "https://arxiv.org/abs/2310.13289"
+  },
+  {
+    "title": "Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models",
+    "area": "general audio LLM",
+    "status": "deep",
+    "interesting": 5,
+    "useful": 5,
+    "why_it_matters": "Strong public reference for universal audio understanding across speech, sounds, music, and multi-turn audio chat.",
+    "next": "Use as an anchor for evaluating broad audio understanding claims.",
+    "link": "https://arxiv.org/abs/2311.07919"
+  },
+  {
+    "title": "Dynamic-SUPERB: Towards a Dynamic, Collaborative, and Comprehensive Instruction-Tuning Benchmark for Speech",
+    "area": "speech evaluation",
     "status": "skim",
     "interesting": 4,
     "useful": 4,
-    "why_it_matters": "Replace with the first paper worth tracking.",
-    "next": "Add link and decide whether to deep read.",
-    "link": ""
+    "why_it_matters": "Relevant benchmark framing for instruction-following speech models and broad speech task coverage.",
+    "next": "Check which tasks map to useful spoken interaction scenarios.",
+    "link": "https://arxiv.org/abs/2309.09510"
+  },
+  {
+    "title": "AudioBench: A Universal Benchmark for Audio Large Language Models",
+    "area": "audio LLM evaluation",
+    "status": "skim",
+    "interesting": 4,
+    "useful": 5,
+    "why_it_matters": "Useful public benchmark for tracking audio LLM behavior across speech, audio scene, and voice/paralinguistic tasks.",
+    "next": "Compare benchmark tasks against product-relevant spoken workflows.",
+    "link": "https://arxiv.org/abs/2406.16020"
+  },
+  {
+    "title": "High Fidelity Neural Audio Compression",
+    "area": "audio codec/tokenizer",
+    "status": "read",
+    "interesting": 4,
+    "useful": 5,
+    "why_it_matters": "EnCodec is a foundational neural audio codec and a useful reference point for audio tokenization.",
+    "next": "Summarize what it preserves and what may matter for downstream audio LLM behavior.",
+    "link": "https://arxiv.org/abs/2210.13438"
+  },
+  {
+    "title": "Low Frame-rate Speech Codec: a Codec Designed for Fast High-quality Speech LLM Training and Inference",
+    "area": "audio LLM efficiency",
+    "status": "deep",
+    "interesting": 5,
+    "useful": 5,
+    "why_it_matters": "Directly connects codec frame rate with faster speech LLM training and inference, making it central for useful compression work.",
+    "next": "Deep read and extract evaluation dimensions for codec-as-LLM-interface.",
+    "link": "https://arxiv.org/abs/2409.12117"
+  },
+  {
+    "title": "Codec-SUPERB @ SLT 2024: A Lightweight Benchmark for Neural Audio Codec Models",
+    "area": "codec evaluation",
+    "status": "skim",
+    "interesting": 4,
+    "useful": 4,
+    "why_it_matters": "Provides a benchmark angle for comparing codec preservation of information useful to speech/audio modeling.",
+    "next": "Check whether its metrics align with audio LLM usefulness.",
+    "link": "https://arxiv.org/abs/2409.14085"
   }
 ]
-

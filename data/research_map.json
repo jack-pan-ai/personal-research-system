@@ -1,17 +1,26 @@
 {
   "big_questions": [
-    "What makes an audio LLM genuinely useful beyond speech-to-text plus text LLM?",
-    "Which audio capabilities need native audio representations?",
-    "What are the highest-leverage bottlenecks for product-grade audio LLMs?"
+    "What can an audio LLM do that cannot be reduced to ASR plus a text LLM?",
+    "Which capabilities require native audio representations rather than text transcripts?",
+    "What is the practical path from impressive demos to reliable, low-latency audio products?",
+    "Which bottleneck is most worth attacking now: data, tokenizer/codec, architecture, training recipe, evaluation, inference cost, or interaction design?"
   ],
   "interesting_gaps": [
-    "TBD"
+    "Native-audio value beyond transcripts is still under-specified.",
+    "Compression for audio LLMs needs behavior-level evaluation, not just bitrate or WER.",
+    "Codec/tokenizer design should be evaluated as an LLM interface, not just as signal reconstruction.",
+    "Spoken-agent evaluation should include latency, interruption, repair, and tool-use loops.",
+    "Paralinguistic information is often acknowledged but weakly operationalized."
   ],
   "useful_problems": [
-    "TBD"
+    "Build a public reading map of audio LLM architectures, tokenizers, and evals.",
+    "Track papers by interesting/useful scores and decide whether to ignore, skim, deep read, reproduce, or build on.",
+    "Define a small suite of public-safe audio LLM product scenarios for qualitative evaluation.",
+    "Compare public codec/tokenizer papers by what they preserve for downstream LLM behavior.",
+    "Maintain a list of audio LLM failure modes that could become research ideas."
   ],
   "beliefs_changed": [
-    "TBD"
+    "The system should prioritize interesting and useful research opportunities over a default statistics-first checklist.",
+    "HTML review output should be treated as a core artifact, not an afterthought."
   ]
 }
-

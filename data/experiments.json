@@ -1,11 +1,18 @@
 [
   {
-    "title": "Seed experiment placeholder",
+    "title": "Native audio vs transcript-only task sketch",
     "status": "planned",
-    "question": "Replace with a concrete research question.",
-    "motivation": "Why is this interesting or useful?",
+    "question": "Which public-safe tasks make direct audio input clearly more useful than transcript-only input?",
+    "motivation": "This is the first minimal test for the native-audio value idea.",
     "result": "",
-    "decision": "Not started."
+    "decision": "Draft task candidates before implementing anything."
+  },
+  {
+    "title": "Codec/tokenizer comparison table",
+    "status": "planned",
+    "question": "Which codec properties appear most relevant to audio LLM usefulness and efficient inference?",
+    "motivation": "This turns compression reading into a concrete map rather than a pile of papers.",
+    "result": "",
+    "decision": "Start with public papers and avoid confidential internal comparisons."
   }
 ]
-

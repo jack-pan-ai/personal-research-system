@@ -16,49 +16,61 @@
       <div class="panel span-12">
         <h2>This Week</h2>
         <div class="metric-row">
-          <div class="metric"><strong>1</strong><span>Papers tracked</span></div>
-          <div class="metric"><strong>0</strong><span>Deep reads</span></div>
-          <div class="metric"><strong>0</strong><span>Active ideas</span></div>
-          <div class="metric"><strong>1</strong><span>Planned/running experiments</span></div>
+          <div class="metric"><strong>9</strong><span>Papers tracked</span></div>
+          <div class="metric"><strong>2</strong><span>Deep reads</span></div>
+          <div class="metric"><strong>2</strong><span>Active ideas</span></div>
+          <div class="metric"><strong>2</strong><span>Planned/running experiments</span></div>
         </div>
       </div>
 
       <div class="panel span-6">
         <h2>Weekly Review</h2>
-        <p><strong>Most interesting:</strong> TBD</p>
-        <p><strong>Most useful:</strong> TBD</p>
-        <p><strong>Best idea:</strong> TBD</p>
-        <p><strong>Best paper/repo:</strong> TBD</p>
-        <p><strong>Stop thinking about:</strong> TBD</p>
-        <p><strong>Push next week:</strong> TBD</p>
+        <p><strong>Most interesting:</strong> The central question is not whether audio LLMs can process audio, but when native audio input creates value that transcript-only systems cannot recover.</p>
+        <p><strong>Most useful:</strong> A public-safe dashboard can track papers, ideas, and experiments without mixing in confidential company context.</p>
+        <p><strong>Best idea:</strong> Codec-as-LLM-interface evaluation: judge tokenizers by downstream usefulness, not only reconstruction.</p>
+        <p><strong>Best paper/repo:</strong> Qwen-Audio and Low Frame-rate Speech Codec are the current deep-read anchors.</p>
+        <p><strong>Stop thinking about:</strong> Do not overbuild the system before it contains real reading decisions.</p>
+        <p><strong>Push next week:</strong> Write one memo on native-audio value beyond ASR and one table comparing codec/tokenizer papers.</p>
       </div>
 
       <div class="panel span-6">
         <h2>Research Map</h2>
         <h3>Big Questions</h3>
-        <ul><li>What makes an audio LLM genuinely useful beyond speech-to-text plus text LLM?</li><li>Which audio capabilities need native audio representations?</li><li>What are the highest-leverage bottlenecks for product-grade audio LLMs?</li></ul>
+        <ul><li>What can an audio LLM do that cannot be reduced to ASR plus a text LLM?</li><li>Which capabilities require native audio representations rather than text transcripts?</li><li>What is the practical path from impressive demos to reliable, low-latency audio products?</li><li>Which bottleneck is most worth attacking now: data, tokenizer/codec, architecture, training recipe, evaluation, inference cost, or interaction design?</li></ul>
         <h3>Interesting Gaps</h3>
-        <ul><li>TBD</li></ul>
+        <ul><li>Native-audio value beyond transcripts is still under-specified.</li><li>Compression for audio LLMs needs behavior-level evaluation, not just bitrate or WER.</li><li>Codec/tokenizer design should be evaluated as an LLM interface, not just as signal reconstruction.</li><li>Spoken-agent evaluation should include latency, interruption, repair, and tool-use loops.</li><li>Paralinguistic information is often acknowledged but weakly operationalized.</li></ul>
         <h3>Useful Problems</h3>
-        <ul><li>TBD</li></ul>
+        <ul><li>Build a public reading map of audio LLM architectures, tokenizers, and evals.</li><li>Track papers by interesting/useful scores and decide whether to ignore, skim, deep read, reproduce, or build on.</li><li>Define a small suite of public-safe audio LLM product scenarios for qualitative evaluation.</li><li>Compare public codec/tokenizer papers by what they preserve for downstream LLM behavior.</li><li>Maintain a list of audio LLM failure modes that could become research ideas.</li></ul>
       </div>
 
       <div class="panel span-4">
         <h2>Papers</h2>
-        <article class="item"><h3>Seed paper placeholder</h3><p class="muted"><span class="tag">audio LLM</span> <span class="tag">skim</span> <span class="score">I 4 / U 4</span></p><p>Replace with the first paper worth tracking.</p><p><strong>Next:</strong> Add link and decide whether to deep read.</p></article>
+        <article class="item"><h3><a href="https://arxiv.org/abs/2306.12925">AudioPaLM: A Large Language Model That Can Speak and Listen</a></h3><p class="muted"><span class="tag">speech/audio LLM</span> <span class="tag">read</span> <span class="score">I 5 / U 4</span></p><p>Early reference point for combining a strong text LLM with audio-language modeling to support speech understanding and generation.</p><p><strong>Next:</strong> Use as a baseline for the question: what does native audio add beyond ASR plus text LLM?</p></article>
+<article class="item"><h3><a href="https://arxiv.org/abs/2305.11000">SpeechGPT: Empowering Large Language Models with Intrinsic Cross-Modal Conversational Abilities</a></h3><p class="muted"><span class="tag">speech LLM</span> <span class="tag">read</span> <span class="score">I 4 / U 4</span></p><p>Useful for thinking about speech-native conversational modeling and discrete speech representations.</p><p><strong>Next:</strong> Extract architecture assumptions and compare with later audio LLM systems.</p></article>
+<article class="item"><h3><a href="https://arxiv.org/abs/2310.13289">SALMONN: Towards Generic Hearing Abilities for Large Language Models</a></h3><p class="muted"><span class="tag">general audio LLM</span> <span class="tag">read</span> <span class="score">I 5 / U 4</span></p><p>Frames audio LLMs as generic hearing systems across speech, audio events, and music.</p><p><strong>Next:</strong> Deep read for capability taxonomy and emergent audio reasoning claims.</p></article>
+<article class="item"><h3><a href="https://arxiv.org/abs/2311.07919">Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models</a></h3><p class="muted"><span class="tag">general audio LLM</span> <span class="tag">deep</span> <span class="score">I 5 / U 5</span></p><p>Strong public reference for universal audio understanding across speech, sounds, music, and multi-turn audio chat.</p><p><strong>Next:</strong> Use as an anchor for evaluating broad audio understanding claims.</p></article>
+<article class="item"><h3><a href="https://arxiv.org/abs/2309.09510">Dynamic-SUPERB: Towards a Dynamic, Collaborative, and Comprehensive Instruction-Tuning Benchmark for Speech</a></h3><p class="muted"><span class="tag">speech evaluation</span> <span class="tag">skim</span> <span class="score">I 4 / U 4</span></p><p>Relevant benchmark framing for instruction-following speech models and broad speech task coverage.</p><p><strong>Next:</strong> Check which tasks map to useful spoken interaction scenarios.</p></article>
+<article class="item"><h3><a href="https://arxiv.org/abs/2406.16020">AudioBench: A Universal Benchmark for Audio Large Language Models</a></h3><p class="muted"><span class="tag">audio LLM evaluation</span> <span class="tag">skim</span> <span class="score">I 4 / U 5</span></p><p>Useful public benchmark for tracking audio LLM behavior across speech, audio scene, and voice/paralinguistic tasks.</p><p><strong>Next:</strong> Compare benchmark tasks against product-relevant spoken workflows.</p></article>
+<article class="item"><h3><a href="https://arxiv.org/abs/2210.13438">High Fidelity Neural Audio Compression</a></h3><p class="muted"><span class="tag">audio codec/tokenizer</span> <span class="tag">read</span> <span class="score">I 4 / U 5</span></p><p>EnCodec is a foundational neural audio codec and a useful reference point for audio tokenization.</p><p><strong>Next:</strong> Summarize what it preserves and what may matter for downstream audio LLM behavior.</p></article>
+<article class="item"><h3><a href="https://arxiv.org/abs/2409.12117">Low Frame-rate Speech Codec: a Codec Designed for Fast High-quality Speech LLM Training and Inference</a></h3><p class="muted"><span class="tag">audio LLM efficiency</span> <span class="tag">deep</span> <span class="score">I 5 / U 5</span></p><p>Directly connects codec frame rate with faster speech LLM training and inference, making it central for useful compression work.</p><p><strong>Next:</strong> Deep read and extract evaluation dimensions for codec-as-LLM-interface.</p></article>
+<article class="item"><h3><a href="https://arxiv.org/abs/2409.14085">Codec-SUPERB @ SLT 2024: A Lightweight Benchmark for Neural Audio Codec Models</a></h3><p class="muted"><span class="tag">codec evaluation</span> <span class="tag">skim</span> <span class="score">I 4 / U 4</span></p><p>Provides a benchmark angle for comparing codec preservation of information useful to speech/audio modeling.</p><p><strong>Next:</strong> Check whether its metrics align with audio LLM usefulness.</p></article>
       </div>
 
       <div class="panel span-4">
         <h2>Ideas</h2>
-        <article class="item"><h3>Seed idea placeholder</h3><p class="muted"><span class="tag">inbox</span></p><p><strong>Interesting:</strong> Replace with an idea that feels non-obvious.</p><p><strong>Useful:</strong> Replace with the expected research or product value.</p><p><strong>Minimal test:</strong> Define the smallest test that could change your mind.</p><p><strong>Next:</strong> Clarify or kill.</p></article>
+        <article class="item"><h3>Native-audio value test suite</h3><p class="muted"><span class="tag">active</span></p><p><strong>Interesting:</strong> It attacks the central ambiguity in audio LLM research: what is gained by listening directly rather than reading transcripts?</p><p><strong>Useful:</strong> Could guide model choice, product design, and evaluation by isolating native audio advantages.</p><p><strong>Minimal test:</strong> Collect a small public-safe set of tasks where transcript-only systems should lose information: prosody, turn-taking, speaker state, acoustic scene, and non-verbal cues.</p><p><strong>Next:</strong> Draft 10 candidate scenarios and map each to required audio information.</p></article>
+<article class="item"><h3>Codec-as-LLM-interface evaluation</h3><p class="muted"><span class="tag">active</span></p><p><strong>Interesting:</strong> Codec quality for reconstruction may not predict usefulness for audio LLM behavior.</p><p><strong>Useful:</strong> Could turn compression/tokenizer reading into a concrete research direction with clear experiments.</p><p><strong>Minimal test:</strong> Compare public codec papers by frame rate, bitrate, causality, preserved semantic/prosodic information, and downstream task implications.</p><p><strong>Next:</strong> Start from EnCodec, Low Frame-rate Speech Codec, and Codec-SUPERB.</p></article>
+<article class="item"><h3>Spoken-agent failure mode taxonomy</h3><p class="muted"><span class="tag">inbox</span></p><p><strong>Interesting:</strong> The product value of audio LLMs may depend more on interaction failures than static benchmark scores.</p><p><strong>Useful:</strong> A taxonomy can turn vague UX pain into model/data/inference/eval research questions.</p><p><strong>Minimal test:</strong> Write a public-safe list of 20 spoken-agent failures and classify root causes.</p><p><strong>Next:</strong> Add examples without using confidential product data.</p></article>
+<article class="item"><h3>Audio LLM paper decision rubric</h3><p class="muted"><span class="tag">inbox</span></p><p><strong>Interesting:</strong> A light rubric can prevent paper reading from becoming a passive collection habit.</p><p><strong>Useful:</strong> Keeps the system aligned with interesting/useful first and makes weekly review faster.</p><p><strong>Minimal test:</strong> For each paper, score interesting/useful and assign one action: ignore, skim, read, deep read, reproduce, build on.</p><p><strong>Next:</strong> Apply to the first 9 dashboard papers.</p></article>
       </div>
 
       <div class="panel span-4">
         <h2>Experiments</h2>
-        <article class="item"><h3>Seed experiment placeholder</h3><p class="muted"><span class="tag">planned</span></p><p><strong>Question:</strong> Replace with a concrete research question.</p><p><strong>Motivation:</strong> Why is this interesting or useful?</p><p><strong>Result:</strong> </p><p><strong>Decision:</strong> Not started.</p></article>
+        <article class="item"><h3>Native audio vs transcript-only task sketch</h3><p class="muted"><span class="tag">planned</span></p><p><strong>Question:</strong> Which public-safe tasks make direct audio input clearly more useful than transcript-only input?</p><p><strong>Motivation:</strong> This is the first minimal test for the native-audio value idea.</p><p><strong>Result:</strong> </p><p><strong>Decision:</strong> Draft task candidates before implementing anything.</p></article>
+<article class="item"><h3>Codec/tokenizer comparison table</h3><p class="muted"><span class="tag">planned</span></p><p><strong>Question:</strong> Which codec properties appear most relevant to audio LLM usefulness and efficient inference?</p><p><strong>Motivation:</strong> This turns compression reading into a concrete map rather than a pile of papers.</p><p><strong>Result:</strong> </p><p><strong>Decision:</strong> Start with public papers and avoid confidential internal comparisons.</p></article>
       </div>
     </section>
-    <footer>Generated 2026-06-23 23:59 from JSON sources in <code>data/</code>.</footer>
+    <footer>Generated 2026-06-24 00:09 from JSON sources in <code>data/</code>.</footer>
   </main>
 </body>
 </html>

@@ -1,11 +1,34 @@
 [
   {
-    "title": "Seed idea placeholder",
+    "title": "Native-audio value test suite",
+    "status": "active",
+    "why_interesting": "It attacks the central ambiguity in audio LLM research: what is gained by listening directly rather than reading transcripts?",
+    "why_useful": "Could guide model choice, product design, and evaluation by isolating native audio advantages.",
+    "minimal_test": "Collect a small public-safe set of tasks where transcript-only systems should lose information: prosody, turn-taking, speaker state, acoustic scene, and non-verbal cues.",
+    "next": "Draft 10 candidate scenarios and map each to required audio information."
+  },
+  {
+    "title": "Codec-as-LLM-interface evaluation",
+    "status": "active",
+    "why_interesting": "Codec quality for reconstruction may not predict usefulness for audio LLM behavior.",
+    "why_useful": "Could turn compression/tokenizer reading into a concrete research direction with clear experiments.",
+    "minimal_test": "Compare public codec papers by frame rate, bitrate, causality, preserved semantic/prosodic information, and downstream task implications.",
+    "next": "Start from EnCodec, Low Frame-rate Speech Codec, and Codec-SUPERB."
+  },
+  {
+    "title": "Spoken-agent failure mode taxonomy",
     "status": "inbox",
-    "why_interesting": "Replace with an idea that feels non-obvious.",
-    "why_useful": "Replace with the expected research or product value.",
-    "minimal_test": "Define the smallest test that could change your mind.",
-    "next": "Clarify or kill."
+    "why_interesting": "The product value of audio LLMs may depend more on interaction failures than static benchmark scores.",
+    "why_useful": "A taxonomy can turn vague UX pain into model/data/inference/eval research questions.",
+    "minimal_test": "Write a public-safe list of 20 spoken-agent failures and classify root causes.",
+    "next": "Add examples without using confidential product data."
+  },
+  {
+    "title": "Audio LLM paper decision rubric",
+    "status": "inbox",
+    "why_interesting": "A light rubric can prevent paper reading from becoming a passive collection habit.",
+    "why_useful": "Keeps the system aligned with interesting/useful first and makes weekly review faster.",
+    "minimal_test": "For each paper, score interesting/useful and assign one action: ignore, skim, read, deep read, reproduce, build on.",
+    "next": "Apply to the first 9 dashboard papers."
   }
 ]
-

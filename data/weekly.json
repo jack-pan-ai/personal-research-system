@@ -1,11 +1,10 @@
 {
-  "week": "current",
-  "most_interesting": "TBD",
-  "most_useful": "TBD",
-  "best_idea": "TBD",
-  "best_paper_or_repo": "TBD",
-  "stop_thinking_about": "TBD",
-  "push_next_week": "TBD",
-  "research_map_updates": "TBD"
+  "week": "2026-W26",
+  "most_interesting": "The central question is not whether audio LLMs can process audio, but when native audio input creates value that transcript-only systems cannot recover.",
+  "most_useful": "A public-safe dashboard can track papers, ideas, and experiments without mixing in confidential company context.",
+  "best_idea": "Codec-as-LLM-interface evaluation: judge tokenizers by downstream usefulness, not only reconstruction.",
+  "best_paper_or_repo": "Qwen-Audio and Low Frame-rate Speech Codec are the current deep-read anchors.",
+  "stop_thinking_about": "Do not overbuild the system before it contains real reading decisions.",
+  "push_next_week": "Write one memo on native-audio value beyond ASR and one table comparing codec/tokenizer papers.",
+  "research_map_updates": "Initialized public-safe audio LLM map with big questions, gaps, useful problems, and seed papers."
 }
-
