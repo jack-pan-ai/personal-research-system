@@ -40,6 +40,34 @@ Open:
 Research/07_Dashboard/index.html
 ```
 
+The same build also writes the GitHub Pages version to:
+
+```text
+docs/index.html
+```
+
+## GitHub Pages
+
+This repository can publish the dashboard through GitHub Pages.
+
+In GitHub:
+
+1. Open the repository settings.
+2. Go to **Pages**.
+3. Set **Source** to **Deploy from a branch**.
+4. Set **Branch** to `main`.
+5. Set **Folder** to `/docs`.
+6. Save.
+
+After each dashboard update, rebuild and push:
+
+```bash
+python3 scripts/build_dashboard.py
+git add .
+git commit -m "Update research dashboard"
+git push
+```
+
 ## GitHub Sync
 
 Do not put secrets, private company data, raw PDFs, or unpublished confidential material in this repo.
@@ -53,4 +81,3 @@ git commit -m "Initialize personal research system"
 ```
 
 Then create a private GitHub repository and connect the remote.
-

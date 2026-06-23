@@ -5,13 +5,16 @@ from __future__ import annotations
 
 import html
 import json
+import shutil
 from datetime import datetime
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-OUT = ROOT / "Research" / "07_Dashboard" / "index.html"
+DASHBOARD_OUT = ROOT / "Research" / "07_Dashboard" / "index.html"
+PAGES_OUT = ROOT / "docs" / "index.html"
+STYLE_SRC = ROOT / "Research" / "07_Dashboard" / "assets" / "style.css"
 
 
 def load_json(name: str, fallback):
@@ -172,11 +175,17 @@ def build() -> str:
 
 
 def main() -> None:
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(build(), encoding="utf-8")
-    print(f"Wrote {OUT}")
+    html_output = build()
+    for out in (DASHBOARD_OUT, PAGES_OUT):
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(html_output, encoding="utf-8")
+        assets_dir = out.parent / "assets"
+        assets_dir.mkdir(exist_ok=True)
+        style_out = assets_dir / "style.css"
+        if STYLE_SRC.resolve() != style_out.resolve():
+            shutil.copy2(STYLE_SRC, style_out)
+        print(f"Wrote {out}")
 
 
 if __name__ == "__main__":
     main()
-
